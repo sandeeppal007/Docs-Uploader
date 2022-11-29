@@ -4,6 +4,7 @@
   "description": "A document uploader ",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "author": "Sandeep pal",
@@ -20,6 +21,16 @@
     "express-fileupload": "^1.4.0",
     "express-session": "^1.17.3",
     "jsonwebtoken": "^8.5.1",
+    "loader": "^2.1.1",
     "mongoose": "^6.7.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandeeppal007/Docs-Uploader.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/sandeeppal007/Docs-Uploader/issues"
+  },
+  "homepage": "https://github.com/sandeeppal007/Docs-Uploader#readme"
 }
