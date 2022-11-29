@@ -1,0 +1,94 @@
+
+<%- include('header') -%>
+<nav>
+    <a href="/">
+        <h1 class="logo">DocsUploader</h1>
+    </a>
+  
+  <ul class="listItem">
+      <a href="/">
+          <li class="listItems">Home</li>
+      </a>
+    
+ 
+      <a href="Logout">
+          <li class="listItems">Logout</li>
+      </a>
+      <a href="Upload">
+          <li class="listItems">Upload</li>
+      </a>
+      <a href="Doc">
+          <li class="listItems">My Docs</li>
+      </a>
+  </ul>
+         
+      </nav>
+<body>
+ 
+
+<div class="docContainer">
+
+
+        <form action="/doc" method="post">
+
+            <% for(var i=0; i < img.length; i++) { %>
+
+                <div class="imgBox">
+                    <h1 class="docName"> <%= img[i].fileName %></h1>
+                    <img src= <%= img[i].imgUrl %>  alt="" class="img">
+                    <button class="button">Download</button>
+                    <button class="buttonRemove" onclick="this.form.submit()" value=<%= img[i]._id %>   name="remove">Delete</button>
+                  
+                </div>
+            
+              
+
+ 
+             
+             <% } %>
+
+          
+        </form>
+
+
+
+</div>
+
+
+
+
+
+
+
+ <script>
+    let docName = document.querySelectorAll(".docName"); 
+    let bd=document.querySelectorAll('.button');
+    let img=document.querySelectorAll('.img');
+    let btnRem=document.querySelectorAll('.buttonRem');
+
+
+  
+       bd.forEach((e,i)=>{
+        e.addEventListener('click',()=>{
+            
+     
+           let impath=img[i].getAttribute('src');
+        let fn=getFileName(impath);
+ 
+            saveAs(impath,fn);
+ 
+})
+})       
+
+
+    
+    function getFileName(str){
+        return str.substring(str.lastIndexOf('/')+1);
+        console.log(str.substring(str.lastIndexOf('/')+1))
+    }
+
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+</body>
+</html>

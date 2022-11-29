@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    background-color: antiquewhite;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+a{
+color: rgb(245, 240, 240);
+text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 1rem;
+    background: rgb(221,9,248);
+    background: linear-gradient(90deg, rgba(221,9,248,0.9951330874146533) 15%, rgba(234,212,4,1) 100%);
+    padding: 1rem 7rem;
+}
+.logo{
+    color: blueviolet;
+    background-color: yellow;
+    padding: .3rem;
+    border: .4rem solid white;
+    border-radius: .4rem;
+}
+.listItem{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    margin-right:5rem ;
+}
+.listItems{
+  
+    background-color: black;
+    padding: .4rem;
+    border-radius: .4rem;
+
+}
+.listItems:hover{
+    background-color: rgb(141, 224, 25);
+}
+.container{
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin: 4rem 10rem;
+
+
+}
+.leftHero{
+    display:flex;
+    /* justify-content:center; */
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2.3rem;
+
+}
+.leftHero h1{
+    font-size: 6rem;
+    width: 80%;
+    font-weight: 600;
+}
+.leftHero p{
+
+    width: 50%;
+}
+
+#leftHeroBtn{
+    color: rgb(255, 250, 250);
+    background: rgb(221,9,248);
+    background: linear-gradient(90deg, rgba(221,9,248,0.9951330874146533) 15%, rgba(234,212,4,1) 100%);
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
+
+footer{
+position: sticky;
+margin: 7rem 60rem;
+display:flex;
+justify-content:center;
+align-items: center;
+
+}
+footer h2{
+    text-align: center;
+
+}
+
+.signUpForm{
+    display:flex;
+  
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: aquamarine;
+    padding: 2rem 8rem;
+    border-radius: 1rem;
+}
+
+.signUpForm input{
+    border-radius: .3rem ;
+    padding: 1rem;
+    border-radius: 1rem;
+ 
+
+}
+.signUpBtn{
+    width: 19rem;
+    height: 4rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 500;
+     border: none;
+     background-color: black;
+     color: white;
+    
+}
+.signUpBtn:hover{
+    background: rgb(221,9,248);
+    background: linear-gradient(90deg, rgba(221,9,248,0.9951330874146533) 15%, rgba(234,212,4,1) 100%);
+   
+}
+.signUpContainer{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 5rem;
+
+
+}
+.docContainer form{
+    display:flex;
+ 
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.imgBox img{
+    width: 100%;
+    border-radius:1rem ;
+}
+.imgBox{
+    width: 35rem;
+ display:flex;
+ justify-content:center;
+ align-items: center;
+ flex-direction: column;
+ background: rgb(126,14,200);
+ border-radius: 1rem;
+ padding: 1rem;
+ margin: 5rem;
+ gap: 1rem;
+ 
+}
+.imgBox button{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    align-items: center;
+    width: 100%;
+   font-weight: 600;
+}
+.imgBox h1{
+    color: rgb(255, 255, 255);
+    background-color: rgb(215, 23, 116);
+    width: 100%;
+    text-align: center;
+    border-radius: 1rem;
+}

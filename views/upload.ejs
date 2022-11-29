@@ -1,0 +1,45 @@
+<%- include('header') -%>
+<nav>
+    <a href="/">
+        <h1 class="logo">DocsUploader</h1>
+    </a>
+  
+  <ul class="listItem">
+      <a href="/">
+          <li class="listItems">Home</li>
+      </a>
+    
+ 
+      <a href="Logout">
+          <li class="listItems">Logout</li>
+      </a>
+      <a href="Upload">
+          <li class="listItems">Upload</li>
+      </a>
+      <a href="Doc">
+          <li class="listItems">My Docs</li>
+      </a>
+  </ul>
+         
+      </nav>
+
+
+      <div class="signUpContainer">
+
+<form action="/Upload" method="post" enctype="multipart/form-data" class="signUpForm">
+
+<label for="img">Select Img</label>
+<input type="file" name="userDoc" id="img">
+
+<label for="filename">File name</label>
+<input type="text" placeholder="enter file name" name="filename" >
+
+<button type="submit" class="signUpBtn">Upload</button>
+
+
+    
+</form>
+
+</div>
+
+<%- include('footer') -%>
