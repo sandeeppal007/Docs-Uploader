@@ -23,12 +23,13 @@ const home = ((req, res) => {
     res.render("index")
 })
 const signup = ((req, res) => {
-    res.render("signup")
+ 
+    res.render("signup",)
 })
 const login = ((req, res) => {
   
-
-    res.render("login")
+    const signupMessage = req.flash('message')
+    res.render("login",{signupMessage:signupMessage})
 })
 const logout = ((req, res) => {
   
@@ -98,6 +99,7 @@ const userSignUp = async (req, res) => {
 
         user.save()
             .then(console.log("success send data"))
+            .then(req.flash('message',"Successfully signup"))
             .then(res.redirect('/login'))
             .catch((err) => {
                 console.log(`data not send from signup => ${err}`)
